@@ -1,0 +1,75 @@
+from tkinter import *
+import webbrowser
+
+class OnlineVehicleFinderUI:
+  def __init__(self, root):
+    self.root = root
+    root.title("Online Vehicle Finder")
+    
+    # Set window size and position
+    root.geometry("800x600+200+100")
+    
+    # Create main frame
+    main_frame = Frame(root)
+    main_frame.pack()
+    
+    # Create header frame
+    header_frame = Frame(main_frame)
+    header_frame.pack()
+    
+    # Create header label
+    header_label = Label(header_frame, text="Online Vehicle Finder", font=("Arial", 32))
+    header_label.pack()
+    
+    # Create navigation frame
+    nav_frame = Frame(main_frame)
+    nav_frame.pack(side=LEFT)
+    
+    # Create navigation buttons
+    self.track_vehicle_button = Button(nav_frame, text="Track Vehicle", command=self.open_track_vehicle_page)
+    self.track_vehicle_button.pack()
+    self.plan_route_button = Button(nav_frame, text="Plan Route", command=self.open_plan_route_page)
+    self.plan_route.pack()
+    self.track_driver_button = Button(nav_frame, text="Track Driver", command=self.open_track_driver_page)
+    self.track_driver_button.pack()
+    self.collaborate_button = Button(nav_frame, text="Collaborate", command=self.open_collaborate_page)
+    self.collaborate_button.pack()
+    self.analyze_data_button = Button(nav_frame, text="Analyze Data", command=self.open_analyze_data_page)
+    self.analyze_data_button.pack()
+    self.manage_security_button = Button(nav_frame, text="Manage Security", command=self.open_manage_security_page)
+    self.manage_security_button.pack()
+    self.manage_scalability_button = Button(nav_frame, text="Manage Scalability", command=self.open_manage_scalability_page)
+    self.manage_scalability_button.pack()
+    
+    # Create content frame
+    content_frame = Frame(main_frame)
+    content_frame.pack(side=RIGHT)
+    
+    # Create content label
+    self.content_label = Label(content_frame, text="Welcome to the Online Vehicle Finder!\n\nPlease use the navigation buttons on the left to access the various features of the application.", font=("Arial", 18))
+    self.content_label.pack()
+  
+  def open_track_vehicle_page(self):
+    self.content_label.config(text="This is the Track Vehicle page.\n\nUse this page to track the real-time location, speed, fuel level, and maintenance status of your vehicles. You can also view any issues or maintenance needs that have been reported for a vehicle.")
+  
+  def open_plan_route_page(self):
+    self.content_label.config(text="This is the Plan Route page.\n\nUse this page to plan optimized routes for your vehicles, taking into account factors such as traffic, distance, and fuel efficiency. You can also view the planned routes for your vehicles on a map.")
+  
+  def open_track_driver_page(self):
+    self.content_label.config(text="This is the Track Driver page.\n\nUse this page to track the real-time location and shift information for your drivers. You can also view the performance data for your drivers over time.")
+  
+  def open_collaborate_page(self):
+    self.content_label.config(text="This is the Collaborate page.\n\nUse this page to send messages and alerts to your drivers, and view any messages or alerts that have been sent to you. This can be a useful tool for communication and coordination within your organization.")
+  
+  def open_analyze_data_page(self):
+    self.content_label.config(text="This is the Analyze Data page.\n\nUse this page to view reports and charts that can help you track and analyze the performance and efficiency of your vehicles and drivers. This can be a useful tool for identifying areas for improvement and optimization.")
+  
+  def open_manage_security_page(self):
+    self.content_label.config(text="This is the Manage Security page.\n\nUse this page to set access control levels for your data, and to encrypt sensitive data to protect it from unauthorized access. This is an important feature to ensure the security and privacy of your organization's data.")
+  
+  def open_manage_scalability_page(self):
+    self.content_label.config(text="This is the Manage Scalability page.\n\nUse this page to increase the data storage and data processing capabilities of the application as needed. This can be a useful tool to ensure that the application can handle a large number of users and a large volume of data.")
+
+root = Tk()
+app = OnlineVehicleFinderUI(root)
+root.mainloop()
