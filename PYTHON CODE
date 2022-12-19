@@ -249,7 +249,7 @@ class OnlineVehicleFinder:
     self.scalability_and_flexibility.increase_data_processing(amount)
 
 # Initialize the application
-vehicle_finder = OnlineVehicleFinder(api_key='AhdmvMxDqJOgQnOaikhC2fYUqMx5Hpjd19bZ9D2dmwX0iJecAd39J02uj2bZbsEk')
+vehicle_finder = OnlineVehicleFinder(api_key='YOUR API KEY')
 
 # Track a vehicle
 vehicle_finder.track_vehicle(vehicle_id=1, location=(45.5236, -122.6750), speed=25, fuel_level=0.75, issues=['flat tire'], maintenance_needs=['oil change'])
